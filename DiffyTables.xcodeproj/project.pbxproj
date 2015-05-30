@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		6E9E5A771B1A32D200C902ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5A761B1A32D200C902ED /* AppDelegate.swift */; };
 		6E9E5A791B1A32EC00C902ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E5A781B1A32EC00C902ED /* Main.storyboard */; };
-		6E9E5A831B1A335000C902ED /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5A821B1A335000C902ED /* InterfaceController.swift */; };
 		6E9E5A891B1A335000C902ED /* DiffyTables WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E5A881B1A335000C902ED /* DiffyTables WatchKit App.app */; };
-		6E9E5A911B1A335000C902ED /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E5A8F1B1A335000C902ED /* Interface.storyboard */; };
 		6E9E5A931B1A335000C902ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E5A921B1A335000C902ED /* Images.xcassets */; };
 		6E9E5A961B1A335000C902ED /* DiffyTables WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E9E5A7E1B1A335000C902ED /* DiffyTables WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6E9E5AA11B1A33BC00C902ED /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5A9E1B1A33BC00C902ED /* ShoppingItem.swift */; };
+		6E9E5AA21B1A33BC00C902ED /* ShoppingListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5A9F1B1A33BC00C902ED /* ShoppingListApp.swift */; };
+		6E9E5AA31B1A33BC00C902ED /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA01B1A33BC00C902ED /* Utilities.swift */; };
+		6E9E5AA51B1A33D200C902ED /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA41B1A33D200C902ED /* Interface.storyboard */; };
+		6E9E5AAA1B1A342F00C902ED /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA71B1A342F00C902ED /* Diffing.swift */; };
+		6E9E5AAB1B1A342F00C902ED /* DiffyTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */; };
+		6E9E5AAC1B1A342F00C902ED /* WatchKitUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +59,16 @@
 		6E9E5A781B1A32EC00C902ED /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6E9E5A7E1B1A335000C902ED /* DiffyTables WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DiffyTables WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E9E5A811B1A335000C902ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E9E5A821B1A335000C902ED /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		6E9E5A881B1A335000C902ED /* DiffyTables WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DiffyTables WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E9E5A8E1B1A335000C902ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../DiffyTables WatchKit App/Info.plist"; sourceTree = "<group>"; };
-		6E9E5A901B1A335000C902ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		6E9E5A921B1A335000C902ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../DiffyTables WatchKit App/Images.xcassets"; sourceTree = "<group>"; };
+		6E9E5A9E1B1A33BC00C902ED /* ShoppingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		6E9E5A9F1B1A33BC00C902ED /* ShoppingListApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListApp.swift; sourceTree = "<group>"; };
+		6E9E5AA01B1A33BC00C902ED /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		6E9E5AA41B1A33D200C902ED /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Interface.storyboard; path = "../DiffyTables WatchKit App/Base.lproj/Interface.storyboard"; sourceTree = "<group>"; };
+		6E9E5AA71B1A342F00C902ED /* Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diffing.swift; sourceTree = "<group>"; };
+		6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffyTables.swift; sourceTree = "<group>"; };
+		6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchKitUpdatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +92,9 @@
 		6E9E5A481B1A329D00C902ED = {
 			isa = PBXGroup;
 			children = (
-				6E9E5A531B1A329D00C902ED /* iOS app */,
+				6E9E5AA61B1A341E00C902ED /* DiffyTables */,
 				6E9E5A7F1B1A335000C902ED /* Demo */,
+				6E9E5A531B1A329D00C902ED /* iOS app */,
 				6E9E5A521B1A329D00C902ED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,14 +123,26 @@
 		6E9E5A7F1B1A335000C902ED /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				6E9E5A821B1A335000C902ED /* InterfaceController.swift */,
-				6E9E5A8F1B1A335000C902ED /* Interface.storyboard */,
+				6E9E5A9E1B1A33BC00C902ED /* ShoppingItem.swift */,
+				6E9E5A9F1B1A33BC00C902ED /* ShoppingListApp.swift */,
+				6E9E5AA01B1A33BC00C902ED /* Utilities.swift */,
+				6E9E5AA41B1A33D200C902ED /* Interface.storyboard */,
 				6E9E5A921B1A335000C902ED /* Images.xcassets */,
 				6E9E5A811B1A335000C902ED /* Info.plist */,
 				6E9E5A8E1B1A335000C902ED /* Info.plist */,
 			);
 			name = Demo;
 			path = "DiffyTables WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		6E9E5AA61B1A341E00C902ED /* DiffyTables */ = {
+			isa = PBXGroup;
+			children = (
+				6E9E5AA71B1A342F00C902ED /* Diffing.swift */,
+				6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */,
+				6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */,
+			);
+			name = DiffyTables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E9E5A911B1A335000C902ED /* Interface.storyboard in Resources */,
+				6E9E5AA51B1A33D200C902ED /* Interface.storyboard in Resources */,
 				6E9E5A931B1A335000C902ED /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E9E5A831B1A335000C902ED /* InterfaceController.swift in Sources */,
+				6E9E5AA11B1A33BC00C902ED /* ShoppingItem.swift in Sources */,
+				6E9E5AA31B1A33BC00C902ED /* Utilities.swift in Sources */,
+				6E9E5AAB1B1A342F00C902ED /* DiffyTables.swift in Sources */,
+				6E9E5AA21B1A33BC00C902ED /* ShoppingListApp.swift in Sources */,
+				6E9E5AAA1B1A342F00C902ED /* Diffing.swift in Sources */,
+				6E9E5AAC1B1A342F00C902ED /* WatchKitUpdatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,18 +304,6 @@
 			targetProxy = 6E9E5A941B1A335000C902ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6E9E5A8F1B1A335000C902ED /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E9E5A901B1A335000C902ED /* Base */,
-			);
-			name = Interface.storyboard;
-			path = "../DiffyTables WatchKit App";
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6E9E5A6E1B1A329D00C902ED /* Debug */ = {
