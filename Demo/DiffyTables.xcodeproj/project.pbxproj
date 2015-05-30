@@ -66,9 +66,9 @@
 		6E9E5A9F1B1A33BC00C902ED /* ShoppingListApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListApp.swift; sourceTree = "<group>"; };
 		6E9E5AA01B1A33BC00C902ED /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6E9E5AA41B1A33D200C902ED /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Interface.storyboard; path = "../DiffyTables WatchKit App/Base.lproj/Interface.storyboard"; sourceTree = "<group>"; };
-		6E9E5AA71B1A342F00C902ED /* Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diffing.swift; sourceTree = "<group>"; };
-		6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffyTables.swift; sourceTree = "<group>"; };
-		6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchKitUpdatable.swift; sourceTree = "<group>"; };
+		6E9E5AA71B1A342F00C902ED /* Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Diffing.swift; path = ../Diffing.swift; sourceTree = "<group>"; };
+		6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffyTables.swift; path = ../DiffyTables.swift; sourceTree = "<group>"; };
+		6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchKitUpdatable.swift; path = ../WatchKitUpdatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -487,6 +487,7 @@
 				6E9E5A721B1A329D00C902ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E9E5A971B1A335000C902ED /* Build configuration list for PBXNativeTarget "DiffyTables WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +496,7 @@
 				6E9E5A991B1A335000C902ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E9E5A9A1B1A335000C902ED /* Build configuration list for PBXNativeTarget "DiffyTables WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +505,7 @@
 				6E9E5A9C1B1A335000C902ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
