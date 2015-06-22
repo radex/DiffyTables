@@ -19,3 +19,20 @@ extension WKInterfaceLabel {
         }
     }
 }
+
+class WKUpdatableButton {
+    private(set) var button: WKInterfaceButton
+    private(set) var hidden: Bool
+    
+    init(_ button: WKInterfaceButton, defaultHidden: Bool) {
+        self.button = button
+        self.hidden = defaultHidden
+    }
+    
+    func updateHidden(hidden: Bool) {
+        if hidden != self.hidden {
+            button.setHidden(hidden)
+            self.hidden = hidden
+        }
+    }
+}

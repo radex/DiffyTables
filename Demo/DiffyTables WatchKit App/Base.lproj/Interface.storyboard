@@ -46,8 +46,14 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <button width="1" alignment="left" title="Load more" id="VFZ-1J-ZLR">
+                            <connections>
+                                <action selector="loadMore" destination="uKh-sJ-NYh" id="tvn-lb-d3I"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="_loadMoreButton" destination="VFZ-1J-ZLR" id="gyd-3h-rFU"/>
                         <outlet property="table" destination="JBV-wf-tzw" id="wZl-wJ-UTJ"/>
                     </connections>
                 </controller>

@@ -8,26 +8,66 @@ class ShoppingListApp: WKInterfaceController {
     @IBOutlet weak var table: WKInterfaceTable!
     var items = sampleShoppingList()
     
+// MARK: Initialization
+    
     override func awakeWithContext(context: AnyObject?) {
-        update(items)
+        updateView()
     }
+    
+    var firstActivation = true
+    
+    override func willActivate() {
+        if firstActivation {
+            dispatch_async(dispatch_get_main_queue()) {
+                self.loadMore()
+            }
+        }
+        
+        firstActivation = false
+    }
+    
+// MARK: Data manipulation
     
     @IBAction func add() {
         items.insert(sampleShoppingItem(), atIndex: random(items.count))
-        update(items)
+        rowLimit++
+        updateView()
     }
     
     @IBAction func changeUp() {
         items = shoppingListVariation(items)
-        update(items)
+        updateView()
     }
+    
+// MARK: Rendering
     
     var displayedRows: [ShoppingItemRowModel] = []
     
-    func update(items: [ShoppingItem]) {
-        let newRows = items.map { ShoppingItemRowModel($0) }
+    func updateView() {
+        let newRows = items.limit(rowLimit).map { ShoppingItemRowModel($0) }
         table.updateViewModels(from: displayedRows, to: newRows)
         displayedRows = newRows
+        
+        updateLoadMoreButton()
+    }
+    
+// MARK: Lazy loading
+    
+    @IBOutlet weak var _loadMoreButton: WKInterfaceButton!
+    lazy var loadMoreButton: WKUpdatableButton = WKUpdatableButton(self._loadMoreButton, defaultHidden: false)
+    
+    // This is a tiny number for demonstration only. You'd probably want the initial row limit
+    // to be ~4 (enough to fit one screen), and in loadMore() — double that number.
+    var rowLimit = 1
+    
+    @IBAction func loadMore() {
+        rowLimit += 1
+        updateView()
+    }
+    
+    func updateLoadMoreButton() {
+        let moreToLoad = items.count > rowLimit
+        loadMoreButton.updateHidden(!moreToLoad)
     }
 }
 

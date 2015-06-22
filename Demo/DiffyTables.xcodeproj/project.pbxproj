@@ -125,8 +125,8 @@
 			children = (
 				6E9E5A9E1B1A33BC00C902ED /* ShoppingItem.swift */,
 				6E9E5A9F1B1A33BC00C902ED /* ShoppingListApp.swift */,
-				6E9E5AA01B1A33BC00C902ED /* Utilities.swift */,
 				6E9E5AA41B1A33D200C902ED /* Interface.storyboard */,
+				6E9E5AA01B1A33BC00C902ED /* Utilities.swift */,
 				6E9E5A921B1A335000C902ED /* Images.xcassets */,
 				6E9E5A811B1A335000C902ED /* Info.plist */,
 				6E9E5A8E1B1A335000C902ED /* Info.plist */,
