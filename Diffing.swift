@@ -31,7 +31,7 @@ import Foundation
 /// Calculates the longest common subsequence of two arrays
 /// Based on http://rosettacode.org/wiki/Longest_common_subsequence
 
-func logestCommonSubsequence<T: Equatable>(s1: [T], s2: [T]) -> [T] {
+func longestCommonSubsequence<T: Equatable>(s1: [T], s2: [T]) -> [T] {
     var x = s1.count
     var y = s2.count
     var lens = Array(count: x + 1, repeatedValue: Array(count: y + 1, repeatedValue: 0))
@@ -76,7 +76,7 @@ public enum AlignmentDiffChange {
 /// are added to align the common elements.
 
 public func diffToAlign<T: Equatable>(left: [T], right: [T]) -> [AlignmentDiffChange] {
-    let lcs = logestCommonSubsequence(left, right)
+    let lcs = longestCommonSubsequence(left, right)
     
     var left_i = 0
     var right_i = 0
