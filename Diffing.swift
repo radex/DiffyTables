@@ -121,19 +121,23 @@ public func diffToAlign<T: Equatable>(left: [T], right: [T]) -> [AlignmentDiffCh
             changes.append(.Deletion(pos: pos, len: deletions))
             totalOffset -= deletions
         }
+        
+        // start search with next element
+        left_i++
+        right_i++
     }
     
     // elements after last common element
-    var afterLastInLeft = left.count - left_i - 1
-    var afterLastInRight = right.count - right_i - 1
+    var afterLastInLeft = left.count - left_i
+    var afterLastInRight = right.count - right_i
     
     if afterLastInRight > afterLastInLeft {
         let insertions = afterLastInRight - afterLastInLeft
-        let pos = left_i + 1 + totalOffset
+        let pos = left_i + totalOffset
         changes.append(.Insertion(pos: pos, len: insertions))
     } else if afterLastInLeft > afterLastInRight {
         let deletions = afterLastInLeft - afterLastInRight
-        let pos = left_i + 1 + totalOffset
+        let pos = left_i + totalOffset
         changes.append(.Deletion(pos: pos, len: deletions))
     }
     
