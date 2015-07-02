@@ -99,11 +99,6 @@ class DiffyTables_Tests: XCTestCase {
         
         XCTAssertEqual(longestCommonSubsequence(a, b), Array("MJAU"))
         
-        a = Array("XMJYAUZ")
-        b = Array("MZJAWXU")
-        
-        XCTAssertEqual(longestCommonSubsequence(a, b), Array("MJAU"))
-        
         a = Array("nematode knowledge")
         b = Array("empty bottle")
         
@@ -160,6 +155,26 @@ class DiffyTables_Tests: XCTestCase {
         a = Array("")
         b = Array("ab")
         c = [.Insertion(pos: 0, len: 2)]
+        
+        XCTAssertEqual(diffToAlign(a, b), c)
+        
+        a = Array("banana")
+        b = Array("atana")
+        c = [.Deletion(pos: 0, len: 1)]
+        
+        XCTAssertEqual(diffToAlign(a, b), c)
+
+        a = Array("XMJYAUZ")
+        b = Array("MZJAWXU")
+        c = [.Deletion(pos: 0, len: 1), .Insertion(pos: 1, len: 1), .Deletion(pos: 3, len: 1),
+             .Insertion(pos: 4, len: 2), .Deletion(pos: 7, len: 1)]
+        
+        XCTAssertEqual(diffToAlign(a, b), c)
+
+        a = Array("nematode knowledge")
+        b = Array("empty bottle")
+        c = [.Deletion(pos: 0, len: 1), .Deletion(pos: 5, len: 2), .Deletion(pos: 7, len: 1),
+             .Insertion(pos: 9, len: 1), .Deletion(pos: 12, len: 3)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
     }
