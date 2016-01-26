@@ -31,7 +31,7 @@ import Foundation
 /// Calculates the longest common subsequence of two arrays
 /// Based on http://rosettacode.org/wiki/Longest_common_subsequence
 
-func longestCommonSubsequence<T: Equatable>(s1: [T], s2: [T]) -> [T] {
+func longestCommonSubsequence<T: Equatable>(s1: [T], _ s2: [T]) -> [T] {
     var x = s1.count
     var y = s2.count
     var lens = Array(count: x + 1, repeatedValue: Array(count: y + 1, repeatedValue: 0))
@@ -49,13 +49,13 @@ func longestCommonSubsequence<T: Equatable>(s1: [T], s2: [T]) -> [T] {
     
     while x != 0 && y != 0 {
         if lens[x][y] == lens[x - 1][y] {
-            --x
+            x -= 1
         } else if lens[x][y] == lens[x][y - 1] {
-            --y
+            y -= 1
         } else {
             result.append(s1[x - 1])
-            --x
-            --y
+            x -= 1
+            y -= 1
         }
     }
     
@@ -75,7 +75,7 @@ public enum AlignmentDiffChange {
 /// in `left` and `right`. If the distances differ, deletions and insertions
 /// are added to align the common elements.
 
-public func diffToAlign<T: Equatable>(left: [T], right: [T]) -> [AlignmentDiffChange] {
+public func diffToAlign<T: Equatable>(left: [T], _ right: [T]) -> [AlignmentDiffChange] {
     let lcs = longestCommonSubsequence(left, right)
     
     var left_i = 0
@@ -94,8 +94,8 @@ public func diffToAlign<T: Equatable>(left: [T], right: [T]) -> [AlignmentDiffCh
             if left[left_i] == commonElement {
                 break
             } else {
-                left_i++
-                leftOffset++
+                left_i += 1
+                leftOffset += 1
             }
         }
         
@@ -104,8 +104,8 @@ public func diffToAlign<T: Equatable>(left: [T], right: [T]) -> [AlignmentDiffCh
             if right[right_i] == commonElement {
                 break
             } else {
-                right_i++
-                rightOffset++
+                right_i += 1
+                rightOffset += 1
             }
         }
         
@@ -123,13 +123,13 @@ public func diffToAlign<T: Equatable>(left: [T], right: [T]) -> [AlignmentDiffCh
         }
         
         // start search with next element
-        left_i++
-        right_i++
+        left_i += 1
+        right_i += 1
     }
     
     // elements after last common element
-    var afterLastInLeft = left.count - left_i
-    var afterLastInRight = right.count - right_i
+    let afterLastInLeft = left.count - left_i
+    let afterLastInRight = right.count - right_i
     
     if afterLastInRight > afterLastInLeft {
         let insertions = afterLastInRight - afterLastInLeft

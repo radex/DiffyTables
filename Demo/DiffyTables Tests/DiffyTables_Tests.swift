@@ -20,7 +20,7 @@ public func == (left: AlignmentDiffChange, right: AlignmentDiffChange) -> Bool {
     }
 }
 
-extension AlignmentDiffChange: Printable {
+extension AlignmentDiffChange: CustomStringConvertible {
     public var description: String {
         switch self {
         case .Insertion(let pos, let len): return "Insertion(\(pos), \(len))"
@@ -89,20 +89,20 @@ class DiffyTables_Tests: XCTestCase {
         var a: [Character]
         var b: [Character]
         
-        a = Array("banana")
-        b = Array("atana")
+        a = Array("banana".characters)
+        b = Array("atana".characters)
         
-        XCTAssertEqual(longestCommonSubsequence(a, b), Array("aana"))
+        XCTAssertEqual(longestCommonSubsequence(a, b), Array("aana".characters))
         
-        a = Array("XMJYAUZ")
-        b = Array("MZJAWXU")
+        a = Array("XMJYAUZ".characters)
+        b = Array("MZJAWXU".characters)
         
-        XCTAssertEqual(longestCommonSubsequence(a, b), Array("MJAU"))
+        XCTAssertEqual(longestCommonSubsequence(a, b), Array("MJAU".characters))
         
-        a = Array("nematode knowledge")
-        b = Array("empty bottle")
+        a = Array("nematode knowledge".characters)
+        b = Array("empty bottle".characters)
         
-        XCTAssertEqual(longestCommonSubsequence(a, b), Array("emt ole"))
+        XCTAssertEqual(longestCommonSubsequence(a, b), Array("emt ole".characters))
     }
     
     func testDiff() {
@@ -110,69 +110,69 @@ class DiffyTables_Tests: XCTestCase {
         var b: [Character]
         var c: [AlignmentDiffChange]
         
-        a = Array("abcdef")
-        b = Array("abcdef")
+        a = Array("abcdef".characters)
+        b = Array("abcdef".characters)
         c = []
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
-        a = Array("abcdef")
-        b = Array("xabcdef")
+        a = Array("abcdef".characters)
+        b = Array("xabcdef".characters)
         c = [.Insertion(pos: 0, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
-        a = Array("abcdef")
-        b = Array("xabcde")
+        a = Array("abcdef".characters)
+        b = Array("xabcde".characters)
         c = [.Insertion(pos: 0, len: 1), .Deletion(pos: 6, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
-        a = Array("abcdef")
-        b = Array("adef")
+        a = Array("abcdef".characters)
+        b = Array("adef".characters)
         c = [.Deletion(pos: 1, len: 2)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
-        a = Array("abcdef")
-        b = Array("acbdef")
+        a = Array("abcdef".characters)
+        b = Array("acbdef".characters)
         c = [.Insertion(pos: 1, len: 1), .Deletion(pos: 3, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
-        a = Array("a")
-        b = Array("")
+        a = Array("a".characters)
+        b = Array("".characters)
         c = [.Deletion(pos: 0, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
-        a = Array("ab")
-        b = Array("")
+        a = Array("ab".characters)
+        b = Array("".characters)
         c = [.Deletion(pos: 0, len: 2)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
-        a = Array("")
-        b = Array("ab")
+        a = Array("".characters)
+        b = Array("ab".characters)
         c = [.Insertion(pos: 0, len: 2)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
-        a = Array("banana")
-        b = Array("atana")
+        a = Array("banana".characters)
+        b = Array("atana".characters)
         c = [.Deletion(pos: 0, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
 
-        a = Array("XMJYAUZ")
-        b = Array("MZJAWXU")
+        a = Array("XMJYAUZ".characters)
+        b = Array("MZJAWXU".characters)
         c = [.Deletion(pos: 0, len: 1), .Insertion(pos: 1, len: 1), .Deletion(pos: 3, len: 1),
              .Insertion(pos: 4, len: 2), .Deletion(pos: 7, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
 
-        a = Array("nematode knowledge")
-        b = Array("empty bottle")
+        a = Array("nematode knowledge".characters)
+        b = Array("empty bottle".characters)
         c = [.Deletion(pos: 0, len: 1), .Deletion(pos: 5, len: 2), .Deletion(pos: 7, len: 1),
              .Insertion(pos: 9, len: 1), .Deletion(pos: 12, len: 3)]
         

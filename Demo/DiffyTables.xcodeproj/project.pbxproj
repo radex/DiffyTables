@@ -262,6 +262,7 @@
 		6E9E5A491B1A329D00C902ED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Radosław Pietruszewski";
 				TargetAttributes = {
@@ -594,6 +595,7 @@
 				6E695D911B42BF6700A88DB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E9E5A4C1B1A329D00C902ED /* Build configuration list for PBXProject "DiffyTables" */ = {
 			isa = XCConfigurationList;

@@ -30,7 +30,7 @@ class ShoppingListApp: WKInterfaceController {
     
     @IBAction func add() {
         items.insert(sampleShoppingItem(), atIndex: random(items.count))
-        rowLimit++
+        rowLimit += 1
         updateView()
     }
     
@@ -99,7 +99,7 @@ class ShoppingItemRow: NSObject, UpdatableRowController {
     @IBOutlet weak var name: WKInterfaceLabel!
     
     func update(from old: ShoppingItemRowModel?, to new: ShoppingItemRowModel) {
-        checkbox.updateImageName(from: map(old?.completed, checkboxImage) ?? "checkbox",
+        checkbox.updateImageName(from: (old?.completed).map(checkboxImage) ?? "checkbox",
                                    to: checkboxImage(new.completed))
         name.updateText(from: old?.name, to: new.name)
     }

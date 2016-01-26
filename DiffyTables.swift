@@ -67,7 +67,7 @@ public extension WKInterfaceTable {
 
         // Update rows with fresh data
 
-        for (i, (displayedModel, newModel)) in enumerate(zip(displayed, new)) {
+        for (i, (displayedModel, newModel)) in zip(displayed, new).enumerate() {
             let row = rowControllerAtIndex(i) as! T.RowController
             row.update(from: displayedModel, to: newModel)
         }
@@ -96,7 +96,7 @@ public extension WKInterfaceTable {
                     working.insert(nil, atIndex: pos)
                 }
             case .Deletion(let pos, let len):
-                working.removeRange(Range(start: pos, end: pos + len))
+                working.removeRange(pos..<(pos + len))
             }
         }
 

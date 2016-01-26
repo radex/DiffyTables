@@ -10,7 +10,7 @@ struct ShoppingItem {
     var completed: Bool
 }
 
-extension ShoppingItem: Printable {
+extension ShoppingItem: CustomStringConvertible {
     var description: String {
         let completion = completed ? "Done: " : ""
         return "ShoppingItem(\(completion)\(name))"
