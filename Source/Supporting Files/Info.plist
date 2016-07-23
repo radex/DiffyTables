@@ -4,35 +4,23 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
-	<key>CFBundleDisplayName</key>
-	<string>DiffyTables WatchKit Extension</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>io.radex.Demo.watchkitextension</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
-	<string>XPC!</string>
+	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
-	<key>NSExtension</key>
-	<dict>
-		<key>NSExtensionAttributes</key>
-		<dict>
-			<key>WKAppBundleIdentifier</key>
-			<string>io.radex.Demo.watchkitapp</string>
-		</dict>
-		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.watchkit</string>
-	</dict>
-	<key>RemoteInterfacePrincipalClass</key>
-	<string>$(PRODUCT_MODULE_NAME).InterfaceController</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>NSPrincipalClass</key>
+	<string></string>
 </dict>
 </plist>

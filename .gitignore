@@ -15,3 +15,8 @@ xcuserdata/
 *.xccheckout
 /Build/
 /DerivedData/
+
+Carthage/Build
+*.dSYM
+*.dSYM.zip
+
