@@ -35,13 +35,13 @@ import WatchKit
 public protocol _TableRowModel { }
 
 public protocol TableRowModel: _TableRowModel {
-    typealias RowController: UpdatableRowController
+    associatedtype RowController: UpdatableRowController
     static var tableRowType: String { get }
     var objectId: String { get }
 }
 
 public protocol UpdatableRowController {
-    typealias RowModel: _TableRowModel
+    associatedtype RowModel: _TableRowModel
 
     func update(from old: RowModel?, to new: RowModel)
 }
