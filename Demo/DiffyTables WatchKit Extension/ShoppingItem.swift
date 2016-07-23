@@ -27,14 +27,15 @@ func sampleShoppingList() -> [ShoppingItem] {
     ]
 }
 
-func shoppingListVariation(var list: [ShoppingItem]) -> [ShoppingItem] {
+func shoppingListVariation(_ list: [ShoppingItem]) -> [ShoppingItem] {
+    var list = list
     let rand = { random(list.count) }
     
     // reorder a random element
     var i = rand()
     var el = list[i]
-    list.removeAtIndex(i)
-    list.insert(el, atIndex: rand())
+    list.remove(at: i)
+    list.insert(el, at: rand())
     
     // toggle `completed` for a random element
     i = rand()

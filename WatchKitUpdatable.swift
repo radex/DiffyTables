@@ -29,7 +29,7 @@ class WKUpdatableButton {
         self.hidden = defaultHidden
     }
     
-    func updateHidden(hidden: Bool) {
+    func updateHidden(_ hidden: Bool) {
         if hidden != self.hidden {
             button.setHidden(hidden)
             self.hidden = hidden

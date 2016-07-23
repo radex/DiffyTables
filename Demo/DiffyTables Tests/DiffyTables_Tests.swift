@@ -7,14 +7,14 @@ extension AlignmentDiffChange: Equatable {}
 
 public func == (left: AlignmentDiffChange, right: AlignmentDiffChange) -> Bool {
     switch left {
-    case .Insertion(pos: let a, len: let b):
+    case .insertion(pos: let a, len: let b):
         switch right {
-        case .Insertion(pos: let aa, len: let bb): return a == aa && b == bb
+        case .insertion(pos: let aa, len: let bb): return a == aa && b == bb
         default: return false
         }
-    case .Deletion(pos: let a, len: let b):
+    case .deletion(pos: let a, len: let b):
         switch right {
-        case .Deletion(pos: let aa, len: let bb): return a == aa && b == bb
+        case .deletion(pos: let aa, len: let bb): return a == aa && b == bb
         default: return false
         }
     }
@@ -23,8 +23,8 @@ public func == (left: AlignmentDiffChange, right: AlignmentDiffChange) -> Bool {
 extension AlignmentDiffChange: CustomStringConvertible {
     public var description: String {
         switch self {
-        case .Insertion(let pos, let len): return "Insertion(\(pos), \(len))"
-        case .Deletion (let pos, let len): return "Deletion(\(pos), \(len))"
+        case .insertion(let pos, let len): return "Insertion(\(pos), \(len))"
+        case .deletion (let pos, let len): return "Deletion(\(pos), \(len))"
         }
     }
 }
@@ -118,63 +118,63 @@ class DiffyTables_Tests: XCTestCase {
         
         a = Array("abcdef".characters)
         b = Array("xabcdef".characters)
-        c = [.Insertion(pos: 0, len: 1)]
+        c = [.insertion(pos: 0, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
         a = Array("abcdef".characters)
         b = Array("xabcde".characters)
-        c = [.Insertion(pos: 0, len: 1), .Deletion(pos: 6, len: 1)]
+        c = [.insertion(pos: 0, len: 1), .deletion(pos: 6, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
         a = Array("abcdef".characters)
         b = Array("adef".characters)
-        c = [.Deletion(pos: 1, len: 2)]
+        c = [.deletion(pos: 1, len: 2)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
         a = Array("abcdef".characters)
         b = Array("acbdef".characters)
-        c = [.Insertion(pos: 1, len: 1), .Deletion(pos: 3, len: 1)]
+        c = [.insertion(pos: 1, len: 1), .deletion(pos: 3, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
         a = Array("a".characters)
         b = Array("".characters)
-        c = [.Deletion(pos: 0, len: 1)]
+        c = [.deletion(pos: 0, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
         a = Array("ab".characters)
         b = Array("".characters)
-        c = [.Deletion(pos: 0, len: 2)]
+        c = [.deletion(pos: 0, len: 2)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
         a = Array("".characters)
         b = Array("ab".characters)
-        c = [.Insertion(pos: 0, len: 2)]
+        c = [.insertion(pos: 0, len: 2)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
         
         a = Array("banana".characters)
         b = Array("atana".characters)
-        c = [.Deletion(pos: 0, len: 1)]
+        c = [.deletion(pos: 0, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
 
         a = Array("XMJYAUZ".characters)
         b = Array("MZJAWXU".characters)
-        c = [.Deletion(pos: 0, len: 1), .Insertion(pos: 1, len: 1), .Deletion(pos: 3, len: 1),
-             .Insertion(pos: 4, len: 2), .Deletion(pos: 7, len: 1)]
+        c = [.deletion(pos: 0, len: 1), .insertion(pos: 1, len: 1), .deletion(pos: 3, len: 1),
+             .insertion(pos: 4, len: 2), .deletion(pos: 7, len: 1)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
 
         a = Array("nematode knowledge".characters)
         b = Array("empty bottle".characters)
-        c = [.Deletion(pos: 0, len: 1), .Deletion(pos: 5, len: 2), .Deletion(pos: 7, len: 1),
-             .Insertion(pos: 9, len: 1), .Deletion(pos: 12, len: 3)]
+        c = [.deletion(pos: 0, len: 1), .deletion(pos: 5, len: 2), .deletion(pos: 7, len: 1),
+             .insertion(pos: 9, len: 1), .deletion(pos: 12, len: 3)]
         
         XCTAssertEqual(diffToAlign(a, b), c)
     }

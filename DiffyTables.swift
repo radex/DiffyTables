@@ -35,13 +35,13 @@ import WatchKit
 public protocol _TableRowModel { }
 
 public protocol TableRowModel: _TableRowModel {
-    typealias RowController: UpdatableRowController
+    associatedtype RowController: UpdatableRowController
     static var tableRowType: String { get }
     var objectId: String { get }
 }
 
 public protocol UpdatableRowController {
-    typealias RowModel: _TableRowModel
+    associatedtype RowModel: _TableRowModel
 
     func update(from old: RowModel?, to new: RowModel)
 }
@@ -57,7 +57,7 @@ public extension WKInterfaceTable {
         // displayed data with `new` data as closely as possible
         // (Or just set up new rows if table is empty)
         if old.count == 0 {
-            displayed = Array(count: new.count, repeatedValue: nil)
+            displayed = Array(repeating: nil, count: new.count)
             setNumberOfRows(new.count, withRowType: T.tableRowType)
         } else {
             let changes = diffToAlign(old.map { $0.objectId }, new.map { $0.objectId })
@@ -67,36 +67,36 @@ public extension WKInterfaceTable {
 
         // Update rows with fresh data
 
-        for (i, (displayedModel, newModel)) in zip(displayed, new).enumerate() {
-            let row = rowControllerAtIndex(i) as! T.RowController
+        for (i, (displayedModel, newModel)) in zip(displayed, new).enumerated() {
+            let row = rowController(at: i) as! T.RowController
             row.update(from: displayedModel, to: newModel)
         }
     }
 
-    private func applyChanges(changes: [AlignmentDiffChange], insertedRowType: String) {
+    private func applyChanges(_ changes: [AlignmentDiffChange], insertedRowType: String) {
         for change in changes {
             switch change {
-            case .Insertion(let pos, let len):
-                let rows = NSIndexSet(indexesInRange: NSMakeRange(pos, len))
-                insertRowsAtIndexes(rows, withRowType: insertedRowType)
-            case .Deletion(let pos, let len):
-                let rows = NSIndexSet(indexesInRange: NSMakeRange(pos, len))
-                removeRowsAtIndexes(rows)
+            case .insertion(let pos, let len):
+                let rows = IndexSet(integersIn: NSMakeRange(pos, len).toRange() ?? 0..<0)
+                insertRows(at: rows, withRowType: insertedRowType)
+            case .deletion(let pos, let len):
+                let rows = IndexSet(integersIn: NSMakeRange(pos, len).toRange() ?? 0..<0)
+                removeRows(at: rows)
             }
         }
     }
 
-    private func applyChangesToArray<T>(changes: [AlignmentDiffChange], array: [T]) -> [T?] {
+    private func applyChangesToArray<T>(_ changes: [AlignmentDiffChange], array: [T]) -> [T?] {
         var working: [T?] = array.map { $0 }
 
         for change in changes {
             switch change {
-            case .Insertion(let pos, let len):
+            case .insertion(let pos, let len):
                 for _ in (0..<len) {
-                    working.insert(nil, atIndex: pos)
+                    working.insert(nil, at: pos)
                 }
-            case .Deletion(let pos, let len):
-                working.removeRange(pos..<(pos + len))
+            case .deletion(let pos, let len):
+                working.removeSubrange(pos..<(pos + len))
             }
         }
 

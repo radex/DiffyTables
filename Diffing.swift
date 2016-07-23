@@ -31,10 +31,10 @@ import Foundation
 /// Calculates the longest common subsequence of two arrays
 /// Based on http://rosettacode.org/wiki/Longest_common_subsequence
 
-func longestCommonSubsequence<T: Equatable>(s1: [T], _ s2: [T]) -> [T] {
+func longestCommonSubsequence<T: Equatable>(_ s1: [T], _ s2: [T]) -> [T] {
     var x = s1.count
     var y = s2.count
-    var lens = Array(count: x + 1, repeatedValue: Array(count: y + 1, repeatedValue: 0))
+    var lens = Array(repeating: Array(repeating: 0, count: y + 1), count: x + 1)
     var result: [T] = []
     
     for i in 0..<x {
@@ -59,12 +59,12 @@ func longestCommonSubsequence<T: Equatable>(s1: [T], _ s2: [T]) -> [T] {
         }
     }
     
-    return result.reverse()
+    return result.reversed()
 }
 
 public enum AlignmentDiffChange {
-    case Insertion(pos: Int, len: Int)
-    case Deletion(pos: Int, len: Int)
+    case insertion(pos: Int, len: Int)
+    case deletion(pos: Int, len: Int)
 }
 
 /// Calculates the smallest possible set of insertions and deletions
@@ -75,7 +75,7 @@ public enum AlignmentDiffChange {
 /// in `left` and `right`. If the distances differ, deletions and insertions
 /// are added to align the common elements.
 
-public func diffToAlign<T: Equatable>(left: [T], _ right: [T]) -> [AlignmentDiffChange] {
+public func diffToAlign<T: Equatable>(_ left: [T], _ right: [T]) -> [AlignmentDiffChange] {
     let lcs = longestCommonSubsequence(left, right)
     
     var left_i = 0
@@ -113,12 +113,12 @@ public func diffToAlign<T: Equatable>(left: [T], _ right: [T]) -> [AlignmentDiff
         if rightOffset > leftOffset {
             let insertions = rightOffset - leftOffset
             let pos = left_i + totalOffset
-            changes.append(.Insertion(pos: pos, len: insertions))
+            changes.append(.insertion(pos: pos, len: insertions))
             totalOffset += insertions
         } else if leftOffset > rightOffset {
             let deletions = leftOffset - rightOffset
             let pos = left_i - deletions + totalOffset
-            changes.append(.Deletion(pos: pos, len: deletions))
+            changes.append(.deletion(pos: pos, len: deletions))
             totalOffset -= deletions
         }
         
@@ -134,11 +134,11 @@ public func diffToAlign<T: Equatable>(left: [T], _ right: [T]) -> [AlignmentDiff
     if afterLastInRight > afterLastInLeft {
         let insertions = afterLastInRight - afterLastInLeft
         let pos = left_i + totalOffset
-        changes.append(.Insertion(pos: pos, len: insertions))
+        changes.append(.insertion(pos: pos, len: insertions))
     } else if afterLastInLeft > afterLastInRight {
         let deletions = afterLastInLeft - afterLastInRight
         let pos = left_i + totalOffset
-        changes.append(.Deletion(pos: pos, len: deletions))
+        changes.append(.deletion(pos: pos, len: deletions))
     }
     
     return changes

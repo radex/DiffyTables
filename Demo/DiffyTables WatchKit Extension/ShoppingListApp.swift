@@ -10,7 +10,7 @@ class ShoppingListApp: WKInterfaceController {
     
 // MARK: Initialization
     
-    override func awakeWithContext(context: AnyObject?) {
+    override func awake(withContext context: AnyObject?) {
         updateView()
     }
     
@@ -18,7 +18,7 @@ class ShoppingListApp: WKInterfaceController {
     
     override func willActivate() {
         if firstActivation {
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.loadMore()
             }
         }
@@ -29,7 +29,7 @@ class ShoppingListApp: WKInterfaceController {
 // MARK: Data manipulation
     
     @IBAction func add() {
-        items.insert(sampleShoppingItem(), atIndex: random(items.count))
+        items.insert(sampleShoppingItem(), at: random(items.count))
         rowLimit += 1
         updateView()
     }
@@ -104,7 +104,7 @@ class ShoppingItemRow: NSObject, UpdatableRowController {
         name.updateText(from: old?.name, to: new.name)
     }
     
-    func checkboxImage(completed: Bool) -> String {
+    func checkboxImage(_ completed: Bool) -> String {
         return completed ? "checkbox-completed" : "checkbox"
     }
 }
