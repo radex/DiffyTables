@@ -77,10 +77,10 @@ public extension WKInterfaceTable {
         for change in changes {
             switch change {
             case .insertion(let pos, let len):
-                let rows = IndexSet(integersIn: NSMakeRange(pos, len).toRange() ?? 0..<0)
+                let rows = IndexSet(integersIn: pos..<(pos + len))
                 insertRows(at: rows, withRowType: insertedRowType)
             case .deletion(let pos, let len):
-                let rows = IndexSet(integersIn: NSMakeRange(pos, len).toRange() ?? 0..<0)
+                let rows = IndexSet(integersIn: pos..<(pos + len))
                 removeRows(at: rows)
             }
         }
