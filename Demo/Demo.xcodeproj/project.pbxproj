@@ -16,9 +16,9 @@
 		6E9E5AA21B1A33BC00C902ED /* ShoppingListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5A9F1B1A33BC00C902ED /* ShoppingListApp.swift */; };
 		6E9E5AA31B1A33BC00C902ED /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA01B1A33BC00C902ED /* Utilities.swift */; };
 		6E9E5AA51B1A33D200C902ED /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA41B1A33D200C902ED /* Interface.storyboard */; };
-		6E9E5AAA1B1A342F00C902ED /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA71B1A342F00C902ED /* Diffing.swift */; };
-		6E9E5AAB1B1A342F00C902ED /* DiffyTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */; };
-		6E9E5AAC1B1A342F00C902ED /* WatchKitUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */; };
+		6EEB21241D44A21300ECA84E /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA71B1A342F00C902ED /* Diffing.swift */; };
+		6EEB21251D44A21300ECA84E /* DiffyTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */; };
+		6EEB21261D44A21300ECA84E /* WatchKitUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,9 +66,9 @@
 		6E9E5A9F1B1A33BC00C902ED /* ShoppingListApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListApp.swift; sourceTree = "<group>"; };
 		6E9E5AA01B1A33BC00C902ED /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6E9E5AA41B1A33D200C902ED /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Interface.storyboard; path = "../DiffyTables WatchKit App/Base.lproj/Interface.storyboard"; sourceTree = "<group>"; };
-		6E9E5AA71B1A342F00C902ED /* Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Diffing.swift; path = ../DiffyTables/Diffing.swift; sourceTree = "<group>"; };
-		6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffyTables.swift; path = ../../DiffyTables.swift; sourceTree = "<group>"; };
-		6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchKitUpdatable.swift; path = ../../WatchKitUpdatable.swift; sourceTree = "<group>"; };
+		6E9E5AA71B1A342F00C902ED /* Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Diffing.swift; path = ../Source/Diffing.swift; sourceTree = "<group>"; };
+		6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffyTables.swift; path = ../Source/DiffyTables.swift; sourceTree = "<group>"; };
+		6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchKitUpdatable.swift; path = ../Source/WatchKitUpdatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,10 +284,10 @@
 			files = (
 				6E9E5AA11B1A33BC00C902ED /* ShoppingItem.swift in Sources */,
 				6E9E5AA31B1A33BC00C902ED /* Utilities.swift in Sources */,
-				6E9E5AAB1B1A342F00C902ED /* DiffyTables.swift in Sources */,
+				6EEB21251D44A21300ECA84E /* DiffyTables.swift in Sources */,
 				6E9E5AA21B1A33BC00C902ED /* ShoppingListApp.swift in Sources */,
-				6E9E5AAA1B1A342F00C902ED /* Diffing.swift in Sources */,
-				6E9E5AAC1B1A342F00C902ED /* WatchKitUpdatable.swift in Sources */,
+				6EEB21241D44A21300ECA84E /* Diffing.swift in Sources */,
+				6EEB21261D44A21300ECA84E /* WatchKitUpdatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
