@@ -10,7 +10,7 @@ Instead of manipulating the table directly from an interface controller, you can
 
 1. Read my article: [Practical and efficient WatchKit tables with view model diffing](http://radex.io/watch/diffing/). It explains how to structure your application so you can use DiffyTables. Seriously, go read it, I can wait.
 2. Check out the demo project in the `Demo/` folder
-3. Copy `Diffing.swift`, `WatchKitUpdatable.swift`, and `DiffyTables.swift` to your project.
+3. Copy `Diffing.swift`, `WatchKitUpdatable.swift`, and `DiffyTables.swift` from `Source/` to your project.
 4. Now you can create your view models (conforming to `TableRowModel`) and make your row controllers conform to `UpdatableRowController`
 5. Boom, you can now use `table.updateViewModels()` to do all the updating for you 😊
 6. **Bonus:** You can make your app even faster by adopting lazy loading. Read [Lazy WatchKit tables](http://radex.io/watch/lazy/) for more info
