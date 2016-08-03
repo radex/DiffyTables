@@ -288,12 +288,14 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		B674816A1D43AEA4003F6357 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
