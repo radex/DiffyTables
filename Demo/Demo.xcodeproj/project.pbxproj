@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E49BA321D43938100F2D680 /* DiffyTables WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E9E5A7E1B1A335000C902ED /* DiffyTables WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6E49BA351D43938100F2D680 /* DiffyTables WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6E9E5A881B1A335000C902ED /* DiffyTables WatchKit App.app */; };
-		6E695D8D1B42BF6700A88DB2 /* DiffyTables_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E695D8C1B42BF6700A88DB2 /* DiffyTables_Tests.swift */; };
-		6E695D931B42C01700A88DB2 /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA71B1A342F00C902ED /* Diffing.swift */; };
 		6E9E5A771B1A32D200C902ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5A761B1A32D200C902ED /* AppDelegate.swift */; };
 		6E9E5A791B1A32EC00C902ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E5A781B1A32EC00C902ED /* Main.storyboard */; };
 		6E9E5A931B1A335000C902ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E5A921B1A335000C902ED /* Images.xcassets */; };
@@ -18,54 +14,49 @@
 		6E9E5AA21B1A33BC00C902ED /* ShoppingListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5A9F1B1A33BC00C902ED /* ShoppingListApp.swift */; };
 		6E9E5AA31B1A33BC00C902ED /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA01B1A33BC00C902ED /* Utilities.swift */; };
 		6E9E5AA51B1A33D200C902ED /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA41B1A33D200C902ED /* Interface.storyboard */; };
-		6E9E5AAA1B1A342F00C902ED /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA71B1A342F00C902ED /* Diffing.swift */; };
-		6E9E5AAB1B1A342F00C902ED /* DiffyTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */; };
-		6E9E5AAC1B1A342F00C902ED /* WatchKitUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */; };
+		6EEB21241D44A21300ECA84E /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA71B1A342F00C902ED /* Diffing.swift */; };
+		6EEB21251D44A21300ECA84E /* DiffyTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */; };
+		6EEB21261D44A21300ECA84E /* WatchKitUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */; };
+		6EEB21291D44A3EC00ECA84E /* Demo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E9E5A7E1B1A335000C902ED /* Demo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6EEB212C1D44A3EC00ECA84E /* Demo.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6E9E5A881B1A335000C902ED /* Demo.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6E49BA301D43938100F2D680 /* PBXContainerItemProxy */ = {
+		6EEB21271D44A3EC00ECA84E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E9E5A491B1A329D00C902ED /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6E9E5A7D1B1A335000C902ED;
-			remoteInfo = "DiffyTables WatchKit Extension";
+			remoteInfo = "Demo WatchKit Extension";
 		};
-		6E49BA331D43938100F2D680 /* PBXContainerItemProxy */ = {
+		6EEB212A1D44A3EC00ECA84E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E9E5A491B1A329D00C902ED /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6E9E5A871B1A335000C902ED;
-			remoteInfo = "DiffyTables WatchKit App";
-		};
-		6E695D8E1B42BF6700A88DB2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E9E5A491B1A329D00C902ED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6E9E5A501B1A329D00C902ED;
-			remoteInfo = DiffyTables;
+			remoteInfo = "Demo WatchKit App";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6E49BA361D43938100F2D680 /* Embed App Extensions */ = {
+		6EEB212D1D44A3EC00ECA84E /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				6E49BA321D43938100F2D680 /* DiffyTables WatchKit Extension.appex in Embed App Extensions */,
+				6EEB21291D44A3EC00ECA84E /* Demo.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E49BA371D43938100F2D680 /* Embed Watch Content */ = {
+		6EEB212E1D44A3EC00ECA84E /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				6E49BA351D43938100F2D680 /* DiffyTables WatchKit App.app in Embed Watch Content */,
+				6EEB212C1D44A3EC00ECA84E /* Demo.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,35 +64,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6E695D881B42BF6700A88DB2 /* DiffyTables Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DiffyTables Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E695D8B1B42BF6700A88DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E695D8C1B42BF6700A88DB2 /* DiffyTables_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffyTables_Tests.swift; sourceTree = "<group>"; };
-		6E9E5A511B1A329D00C902ED /* DiffyTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiffyTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E9E5A511B1A329D00C902ED /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E9E5A551B1A329D00C902ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E9E5A761B1A32D200C902ED /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E9E5A781B1A32EC00C902ED /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		6E9E5A7E1B1A335000C902ED /* DiffyTables WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DiffyTables WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E9E5A7E1B1A335000C902ED /* Demo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Demo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E9E5A811B1A335000C902ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E9E5A881B1A335000C902ED /* DiffyTables WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DiffyTables WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E9E5A881B1A335000C902ED /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E9E5A8E1B1A335000C902ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../DiffyTables WatchKit App/Info.plist"; sourceTree = "<group>"; };
 		6E9E5A921B1A335000C902ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../DiffyTables WatchKit App/Images.xcassets"; sourceTree = "<group>"; };
 		6E9E5A9E1B1A33BC00C902ED /* ShoppingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		6E9E5A9F1B1A33BC00C902ED /* ShoppingListApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListApp.swift; sourceTree = "<group>"; };
 		6E9E5AA01B1A33BC00C902ED /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6E9E5AA41B1A33D200C902ED /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Interface.storyboard; path = "../DiffyTables WatchKit App/Base.lproj/Interface.storyboard"; sourceTree = "<group>"; };
-		6E9E5AA71B1A342F00C902ED /* Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Diffing.swift; path = ../Diffing.swift; sourceTree = "<group>"; };
-		6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffyTables.swift; path = ../DiffyTables.swift; sourceTree = "<group>"; };
-		6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchKitUpdatable.swift; path = ../WatchKitUpdatable.swift; sourceTree = "<group>"; };
+		6E9E5AA71B1A342F00C902ED /* Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Diffing.swift; path = ../Source/Diffing.swift; sourceTree = "<group>"; };
+		6E9E5AA81B1A342F00C902ED /* DiffyTables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffyTables.swift; path = ../Source/DiffyTables.swift; sourceTree = "<group>"; };
+		6E9E5AA91B1A342F00C902ED /* WatchKitUpdatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchKitUpdatable.swift; path = ../Source/WatchKitUpdatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6E695D851B42BF6700A88DB2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E9E5A4E1B1A329D00C902ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -119,30 +100,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6E695D891B42BF6700A88DB2 /* DiffyTables Tests */ = {
-			isa = PBXGroup;
-			children = (
-				6E695D8C1B42BF6700A88DB2 /* DiffyTables_Tests.swift */,
-				6E695D8A1B42BF6700A88DB2 /* Supporting Files */,
-			);
-			path = "DiffyTables Tests";
-			sourceTree = "<group>";
-		};
-		6E695D8A1B42BF6700A88DB2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6E695D8B1B42BF6700A88DB2 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		6E9E5A481B1A329D00C902ED = {
 			isa = PBXGroup;
 			children = (
-				6E9E5AA61B1A341E00C902ED /* DiffyTables */,
-				6E695D891B42BF6700A88DB2 /* DiffyTables Tests */,
 				6E9E5A7F1B1A335000C902ED /* Demo */,
 				6E9E5A531B1A329D00C902ED /* iOS app */,
+				6E9E5AA61B1A341E00C902ED /* DiffyTables */,
 				6E9E5A521B1A329D00C902ED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,10 +113,9 @@
 		6E9E5A521B1A329D00C902ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E9E5A511B1A329D00C902ED /* DiffyTables.app */,
-				6E9E5A7E1B1A335000C902ED /* DiffyTables WatchKit Extension.appex */,
-				6E9E5A881B1A335000C902ED /* DiffyTables WatchKit App.app */,
-				6E695D881B42BF6700A88DB2 /* DiffyTables Tests.xctest */,
+				6E9E5A511B1A329D00C902ED /* Demo.app */,
+				6E9E5A7E1B1A335000C902ED /* Demo.appex */,
+				6E9E5A881B1A335000C902ED /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,46 +159,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E695D871B42BF6700A88DB2 /* DiffyTables Tests */ = {
+		6E9E5A501B1A329D00C902ED /* Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E695D921B42BF6700A88DB2 /* Build configuration list for PBXNativeTarget "DiffyTables Tests" */;
-			buildPhases = (
-				6E695D841B42BF6700A88DB2 /* Sources */,
-				6E695D851B42BF6700A88DB2 /* Frameworks */,
-				6E695D861B42BF6700A88DB2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6E695D8F1B42BF6700A88DB2 /* PBXTargetDependency */,
-			);
-			name = "DiffyTables Tests";
-			productName = "DiffyTables Tests";
-			productReference = 6E695D881B42BF6700A88DB2 /* DiffyTables Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		6E9E5A501B1A329D00C902ED /* DiffyTables */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6E9E5A701B1A329D00C902ED /* Build configuration list for PBXNativeTarget "DiffyTables" */;
+			buildConfigurationList = 6E9E5A701B1A329D00C902ED /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
 				6E9E5A4D1B1A329D00C902ED /* Sources */,
 				6E9E5A4E1B1A329D00C902ED /* Frameworks */,
 				6E9E5A4F1B1A329D00C902ED /* Resources */,
-				6E49BA371D43938100F2D680 /* Embed Watch Content */,
+				6EEB212E1D44A3EC00ECA84E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E49BA341D43938100F2D680 /* PBXTargetDependency */,
+				6EEB212B1D44A3EC00ECA84E /* PBXTargetDependency */,
 			);
-			name = DiffyTables;
+			name = Demo;
 			productName = DiffyTables;
-			productReference = 6E9E5A511B1A329D00C902ED /* DiffyTables.app */;
+			productReference = 6E9E5A511B1A329D00C902ED /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6E9E5A7D1B1A335000C902ED /* DiffyTables WatchKit Extension */ = {
+		6E9E5A7D1B1A335000C902ED /* Demo WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E9E5A9A1B1A335000C902ED /* Build configuration list for PBXNativeTarget "DiffyTables WatchKit Extension" */;
+			buildConfigurationList = 6E9E5A9A1B1A335000C902ED /* Build configuration list for PBXNativeTarget "Demo WatchKit Extension" */;
 			buildPhases = (
 				6E9E5A7A1B1A335000C902ED /* Sources */,
 				6E9E5A7B1B1A335000C902ED /* Frameworks */,
@@ -246,26 +190,26 @@
 			);
 			dependencies = (
 			);
-			name = "DiffyTables WatchKit Extension";
+			name = "Demo WatchKit Extension";
 			productName = "DiffyTables WatchKit Extension";
-			productReference = 6E9E5A7E1B1A335000C902ED /* DiffyTables WatchKit Extension.appex */;
+			productReference = 6E9E5A7E1B1A335000C902ED /* Demo.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
-		6E9E5A871B1A335000C902ED /* DiffyTables WatchKit App */ = {
+		6E9E5A871B1A335000C902ED /* Demo WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E9E5A971B1A335000C902ED /* Build configuration list for PBXNativeTarget "DiffyTables WatchKit App" */;
+			buildConfigurationList = 6E9E5A971B1A335000C902ED /* Build configuration list for PBXNativeTarget "Demo WatchKit App" */;
 			buildPhases = (
 				6E9E5A861B1A335000C902ED /* Resources */,
-				6E49BA361D43938100F2D680 /* Embed App Extensions */,
+				6EEB212D1D44A3EC00ECA84E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E49BA311D43938100F2D680 /* PBXTargetDependency */,
+				6EEB21281D44A3EC00ECA84E /* PBXTargetDependency */,
 			);
-			name = "DiffyTables WatchKit App";
+			name = "Demo WatchKit App";
 			productName = "DiffyTables WatchKit App";
-			productReference = 6E9E5A881B1A335000C902ED /* DiffyTables WatchKit App.app */;
+			productReference = 6E9E5A881B1A335000C902ED /* Demo.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 /* End PBXNativeTarget section */
@@ -278,11 +222,6 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Radosław Pietruszewski";
 				TargetAttributes = {
-					6E695D871B42BF6700A88DB2 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0800;
-						TestTargetID = 6E9E5A501B1A329D00C902ED;
-					};
 					6E9E5A501B1A329D00C902ED = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0800;
@@ -293,10 +232,11 @@
 					};
 					6E9E5A871B1A335000C902ED = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
-			buildConfigurationList = 6E9E5A4C1B1A329D00C902ED /* Build configuration list for PBXProject "DiffyTables" */;
+			buildConfigurationList = 6E9E5A4C1B1A329D00C902ED /* Build configuration list for PBXProject "Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -309,22 +249,14 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E9E5A501B1A329D00C902ED /* DiffyTables */,
-				6E9E5A7D1B1A335000C902ED /* DiffyTables WatchKit Extension */,
-				6E9E5A871B1A335000C902ED /* DiffyTables WatchKit App */,
-				6E695D871B42BF6700A88DB2 /* DiffyTables Tests */,
+				6E9E5A501B1A329D00C902ED /* Demo */,
+				6E9E5A7D1B1A335000C902ED /* Demo WatchKit Extension */,
+				6E9E5A871B1A335000C902ED /* Demo WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6E695D861B42BF6700A88DB2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E9E5A4F1B1A329D00C902ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,15 +284,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6E695D841B42BF6700A88DB2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E695D8D1B42BF6700A88DB2 /* DiffyTables_Tests.swift in Sources */,
-				6E695D931B42C01700A88DB2 /* Diffing.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E9E5A4D1B1A329D00C902ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,73 +298,29 @@
 			files = (
 				6E9E5AA11B1A33BC00C902ED /* ShoppingItem.swift in Sources */,
 				6E9E5AA31B1A33BC00C902ED /* Utilities.swift in Sources */,
-				6E9E5AAB1B1A342F00C902ED /* DiffyTables.swift in Sources */,
+				6EEB21251D44A21300ECA84E /* DiffyTables.swift in Sources */,
 				6E9E5AA21B1A33BC00C902ED /* ShoppingListApp.swift in Sources */,
-				6E9E5AAA1B1A342F00C902ED /* Diffing.swift in Sources */,
-				6E9E5AAC1B1A342F00C902ED /* WatchKitUpdatable.swift in Sources */,
+				6EEB21241D44A21300ECA84E /* Diffing.swift in Sources */,
+				6EEB21261D44A21300ECA84E /* WatchKitUpdatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6E49BA311D43938100F2D680 /* PBXTargetDependency */ = {
+		6EEB21281D44A3EC00ECA84E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6E9E5A7D1B1A335000C902ED /* DiffyTables WatchKit Extension */;
-			targetProxy = 6E49BA301D43938100F2D680 /* PBXContainerItemProxy */;
+			target = 6E9E5A7D1B1A335000C902ED /* Demo WatchKit Extension */;
+			targetProxy = 6EEB21271D44A3EC00ECA84E /* PBXContainerItemProxy */;
 		};
-		6E49BA341D43938100F2D680 /* PBXTargetDependency */ = {
+		6EEB212B1D44A3EC00ECA84E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6E9E5A871B1A335000C902ED /* DiffyTables WatchKit App */;
-			targetProxy = 6E49BA331D43938100F2D680 /* PBXContainerItemProxy */;
-		};
-		6E695D8F1B42BF6700A88DB2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6E9E5A501B1A329D00C902ED /* DiffyTables */;
-			targetProxy = 6E695D8E1B42BF6700A88DB2 /* PBXContainerItemProxy */;
+			target = 6E9E5A871B1A335000C902ED /* Demo WatchKit App */;
+			targetProxy = 6EEB212A1D44A3EC00ECA84E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		6E695D901B42BF6700A88DB2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "DiffyTables Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.radex.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiffyTables.app/DiffyTables";
-			};
-			name = Debug;
-		};
-		6E695D911B42BF6700A88DB2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "DiffyTables Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.radex.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiffyTables.app/DiffyTables";
-			};
-			name = Release;
-		};
 		6E9E5A6E1B1A329D00C902ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -484,6 +363,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -521,6 +401,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -534,7 +415,7 @@
 				INFOPLIST_FILE = DiffyTables/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.radex.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Demo;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -548,7 +429,7 @@
 				INFOPLIST_FILE = DiffyTables/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.radex.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Demo;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
@@ -565,10 +446,11 @@
 				);
 				IBSC_MODULE = DiffyTables_WatchKit_Extension;
 				INFOPLIST_FILE = "DiffyTables WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = io.radex.DiffyTables.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.radex.Demo.watchkitapp;
+				PRODUCT_NAME = Demo;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -581,10 +463,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IBSC_MODULE = DiffyTables_WatchKit_Extension;
 				INFOPLIST_FILE = "DiffyTables WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = io.radex.DiffyTables.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.radex.Demo.watchkitapp;
+				PRODUCT_NAME = Demo;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -599,8 +482,8 @@
 				);
 				INFOPLIST_FILE = "DiffyTables WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.radex.DiffyTables.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_BUNDLE_IDENTIFIER = io.radex.Demo.watchkitapp.watchkitextension;
+				PRODUCT_NAME = Demo;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -614,8 +497,8 @@
 			buildSettings = {
 				INFOPLIST_FILE = "DiffyTables WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.radex.DiffyTables.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_BUNDLE_IDENTIFIER = io.radex.Demo.watchkitapp.watchkitextension;
+				PRODUCT_NAME = Demo;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -628,16 +511,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6E695D921B42BF6700A88DB2 /* Build configuration list for PBXNativeTarget "DiffyTables Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6E695D901B42BF6700A88DB2 /* Debug */,
-				6E695D911B42BF6700A88DB2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6E9E5A4C1B1A329D00C902ED /* Build configuration list for PBXProject "DiffyTables" */ = {
+		6E9E5A4C1B1A329D00C902ED /* Build configuration list for PBXProject "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E9E5A6E1B1A329D00C902ED /* Debug */,
@@ -646,7 +520,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E9E5A701B1A329D00C902ED /* Build configuration list for PBXNativeTarget "DiffyTables" */ = {
+		6E9E5A701B1A329D00C902ED /* Build configuration list for PBXNativeTarget "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E9E5A711B1A329D00C902ED /* Debug */,
@@ -655,7 +529,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E9E5A971B1A335000C902ED /* Build configuration list for PBXNativeTarget "DiffyTables WatchKit App" */ = {
+		6E9E5A971B1A335000C902ED /* Build configuration list for PBXNativeTarget "Demo WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E9E5A981B1A335000C902ED /* Debug */,
@@ -664,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E9E5A9A1B1A335000C902ED /* Build configuration list for PBXNativeTarget "DiffyTables WatchKit Extension" */ = {
+		6E9E5A9A1B1A335000C902ED /* Build configuration list for PBXNativeTarget "Demo WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E9E5A9B1B1A335000C902ED /* Debug */,
