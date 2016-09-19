@@ -1,4 +1,4 @@
-### 2.0 (2016-09-19)
+### 2.0.0 (2016-09-19)
 
 - Swift 3 release (no functional change)
 
