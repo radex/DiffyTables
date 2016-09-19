@@ -15,6 +15,8 @@ Instead of manipulating the table directly from an interface controller, you can
 5. Boom, you can now use `table.updateViewModels()` to do all the updating for you 😊
 6. **Bonus:** You can make your app even faster by adopting lazy loading. Read [Lazy WatchKit tables](http://radex.io/watch/lazy/) for more info
 
+**Note:** if you're on Swift 2, please use the the [`swift2` branch](https://github.com/radex/DiffyTables/tree/swift2).
+
 #### Via Carthage
 
 Add this to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):

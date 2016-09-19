@@ -1,3 +1,9 @@
+### 2.0 (2016-09-19)
+
+- Swift 3 release (no functional change)
+
+* * *
+
 ### 1.0.1 (2016-08-03)
 
 - Add support for Xcode 8 (Swift 2.3) for Carthage users
