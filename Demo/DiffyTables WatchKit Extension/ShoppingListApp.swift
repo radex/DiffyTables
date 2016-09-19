@@ -10,7 +10,7 @@ class ShoppingListApp: WKInterfaceController {
     
 // MARK: Initialization
     
-    override func awake(withContext context: AnyObject?) {
+    override func awake(withContext context: Any?) {
         updateView()
     }
     

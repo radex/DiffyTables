@@ -47,7 +47,7 @@ public protocol UpdatableRowController {
 }
 
 public extension WKInterfaceTable {
-    public func updateViewModels<T: TableRowModel where T.RowController.RowModel == T>(from old: [T], to new: [T]) {
+    public func updateViewModels<T: TableRowModel>(from old: [T], to new: [T]) where T.RowController.RowModel == T {
         // Represents view models displayed on screen.
         // Same as `old`, but corrected with rows
         // inserted/deleted on screen
